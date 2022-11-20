@@ -7,6 +7,8 @@ namespace Labb4_CollectionGenerics
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Stack: \n");
+
             // Create 5 objects of the Employee class
             Employee employee = new Employee(1001, "Filip", "M", 20000);
             Employee employee1 = new Employee(1002, "Alvin", "M", 25000);
@@ -53,8 +55,13 @@ namespace Labb4_CollectionGenerics
             Employee Check = EmpStack.Peek();
             Console.WriteLine(Check);
 
+            Console.WriteLine($"Items in lsit: {EmpStack.Count}\n");
+
             Employee Check2 = EmpStack.Peek();
             Console.WriteLine(Check2);
+
+            Console.WriteLine($"Items in lsit: {EmpStack.Count}\n");
+
 
             Console.WriteLine("\n----------------------------------\n");
 
@@ -70,6 +77,7 @@ namespace Labb4_CollectionGenerics
 
             Console.WriteLine("\n----------------------------------\n\n\n\n");
 
+            Console.WriteLine("List:\n");
             // List of Employee
             List<Employee> EmpList = new List<Employee>();
             EmpList.Add(employee);
@@ -81,11 +89,11 @@ namespace Labb4_CollectionGenerics
             // Check if employee 2 is in the list
             if (EmpList.Contains(employee2))
             {
-                Console.WriteLine("Employee2 exists in the list!\n");
+                Console.WriteLine("Employee2 object exists in the list!\n");
             }
             else
             {
-                Console.WriteLine("Employee2 does not exist in the list!\n");
+                Console.WriteLine("Employee2 object does not exist in the list!\n");
             }
 
             // Finds the first person with gender Male in the list 
